@@ -1,0 +1,9 @@
+echo "Enter 2 strings: "
+read str1
+read str2
+echo "Concatenated strings: $str1 $str2"
+if [ $str1 == $str2 ] ; then
+  echo "Two strings are equal"
+else
+  echo "Two strings are not equal"
+fi
