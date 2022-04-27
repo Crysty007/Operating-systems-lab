@@ -1,3 +1,4 @@
+#Shell script to concatenate two strings and compare them
 echo "Enter 2 strings: "
 read str1
 read str2
