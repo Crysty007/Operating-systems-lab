@@ -1,0 +1,19 @@
+#Shell script to print the Fibonacci series
+echo "Enter n: "
+read n
+a=0
+b=1
+if [ n == 1 ] ; then
+  echo "$a"
+elif [ n == 2 ] ; then
+  echo -e "$a \n$b"
+else
+  echo -e "$a \n$b"
+  for (( i=2;i<=n;i++ ))
+    do
+      term=$((a+b))
+      a=$b
+      b=$term
+      echo "$term"
+    done
+fi
