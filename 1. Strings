@@ -6,7 +6,7 @@ echo "Concatenated strings: $str1 $str2"
 if [ $str1 == $str2 ] ; then
   echo "Two strings are equal"
 elif [ $str1 < $str2 ] ; then
-  echo "$str1 less than $str2"
+  echo "$str1 is less than $str2"
 else
-  echo "$str1 greater than $str2"
+  echo "$str1 is greater than $str2"
 fi
