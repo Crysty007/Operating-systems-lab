@@ -1,0 +1,15 @@
+#To check whether the given number is Palindrome or not
+echo "Enter a number: "
+read n
+ori=$n
+while [ $n != 0 ]
+do
+   rem=$(( n%10 ))
+   rev=$(( rev*10 + rem ))
+   n=$(( n/10 ))
+done
+if [ $ori -eq $rev ]; then
+   echo "It is a Palindrome number"
+else
+   echo "It is not a Palidromic number"
+fi
