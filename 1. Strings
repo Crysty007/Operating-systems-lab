@@ -5,6 +5,8 @@ read str2
 echo "Concatenated strings: $str1 $str2"
 if [ $str1 == $str2 ] ; then
   echo "Two strings are equal"
+elif [ $str1 < $str2 ] ; then
+  echo "$str1 less than $str2"
 else
-  echo "Two strings are not equal"
+  echo "$str1 greater than $str2"
 fi
