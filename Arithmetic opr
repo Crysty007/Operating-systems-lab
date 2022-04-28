@@ -1,0 +1,13 @@
+#To perform Arithmetic operations using Case
+echo "Enter 2 nos: "
+read a b
+echo "Enter operator(+ - * / %): "
+read op
+case $op in
+'+') echo "$a+$b = $((a+b))" ;;
+'-') echo "$a-$b = $((a-b))" ;;
+'*') echo "$ax$b = $((a*b))" ;;
+'/') echo "$a/$b = $((a/b))" ;;
+'%') echo "$a%$b = $((a%b))" ;;
+*) echo "Invalid"
+esac
