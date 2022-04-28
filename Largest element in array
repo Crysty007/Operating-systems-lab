@@ -1,0 +1,17 @@
+#To find the largest element in array
+echo "Enter array elements: "
+read -a A
+echo "Array elements are: ${A[*]}"
+echo "Length: ${#A[*]}"
+for ((i=0;i<len;i++))
+do
+   echo "${A[*]}"
+done
+max=0
+for i in ${A[*]}
+do
+   if [ $i -gt $max ]; then
+      max=$i
+    fi
+done
+echo "Largest element: $max"
