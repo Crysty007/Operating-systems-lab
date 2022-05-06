@@ -1,0 +1,27 @@
+#Shell script to perform Binary search
+#!/bin/bash
+echo "Enter elements in sorted order: "
+read -a A
+echo "Elements are ${A[*]}"
+echo "Enter key to search: "
+read key
+flag=0
+len=${#A[*]}
+a=0
+b=$(($len-1))
+while [ $a -le $b ]
+do
+   mid=$(((a+b)/2))
+   if [ ${A[mid]} -eq $key ]; then
+      echo "Element found at location $((mid+1))"
+      flag=1
+      break
+   elif [ ${A[mid]} -gt $key ]; then
+      b=$((mid-1))
+   else
+      a=$((mid+1))
+   fi
+done
+if [ $flag -eq 0 ]; then
+   echo "Element not found"
+fi
