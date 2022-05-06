@@ -1,0 +1,19 @@
+#Shell script to perform linear search
+#!/bin/bash
+echo "Enter elements of array: "
+read -a A
+len=${#A[*]}
+echo "Enter key element: "
+read key
+found=0
+for((i=0;i<len;i++))
+do
+   if [ $key == ${A[i]} ]; then
+      echo "key found at $((i+1))"
+      found=1
+      break
+   fi
+done
+if [ $found == 0 ]; then
+   echo "Key not found"
+fi
