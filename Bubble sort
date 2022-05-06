@@ -1,0 +1,30 @@
+#Shell script to perform Bubble sort
+#!/bin/bash
+echo "Enter no. of elements: "
+read n
+echo "Enter elements into array: "
+for ((i=0;i<$n;i++))
+do
+   read A[$i]
+done
+echo "Numbers in the array are: "
+for((i=0;i<n;i++))
+do
+   echo ${A[$i]}
+done
+for ((i=0;i<$n;i++))
+do
+   for ((j=$i;j<$n;j++))
+   do
+      if [ ${A[$i]} -gt ${A[$j]} ] ; then
+         temp=${A[$i]}
+         A[$i]=${A[$j]}
+         A[$j]=$temp
+      fi
+   done
+done
+echo -e "\nSorted numbers"
+for((i=0;i<n;i++))
+do
+   echo ${A[$i]}
+done
